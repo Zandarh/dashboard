@@ -30,6 +30,12 @@ body{
     grid-template-rows: repeat(5, 1fr);
     gap: 30px 0;
 }
+.mobile-header{
+    display: none;
+}
+.profile{
+    display: none;
+}
 .sidebar{
     grid-area: 1/1/6/3;
     background-color: var(--side-bar-bg);
@@ -283,18 +289,53 @@ hr{
 }
 @media only screen and (max-width: 460px) {
     .container{
-        grid-template-columns: repeat(5, 0.2fr);
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         gap: 30px;
     }
     .header{
         display: none;
     }
+    .mobile-header{
+        background-color: var(--header-bg);
+        grid: 1/1;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 5px;
+        
+    }
+    .mobile-header img{
+        width: 40px;
+        cursor: pointer;
+    }
+    div.mobile-header .dp{
+        border-radius: 50%;
+        width: 30px;
+    }
+    
+    .profile{
+        grid-area: 2/1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .profile img{
+        width: 100px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .profile .profile-details p,
+    .profile .profile-details h2{
+        color: var(--card-bg);
+        text-align: center;
+    }
     .sidebar{
         display: none;
     }
     .main-content{
-        grid-area: 2/1/2/5;
+        grid-area: 3/1/3/1;
         gap: 10px;
     }
     .main-content .main-content-div{
@@ -309,30 +350,35 @@ hr{
         font-size: 1.2rem;
     }
     .right-bar{
-        grid-area: 3/1/3/5;
-        width: 90%;
-        margin-left: 25px;
+        grid-area: 4/1/4/1;
+        margin: 10px;
+        
     }
     .holder{
         width: 100%;
         gap: 25px;
+        align-items: center;
     }
     .right-side-bar-up{
         margin: 0;
     }
     .right-side-bar-up .announcements{
         margin-right: 0;
+        width: 90%;
+        align-self: center;
     }
     .right-side-bar-down{
         margin: 0;
+        width: 100%;
     }
     .right-side-bar-down > h3,
     .right-side-bar-up > h3{
         align-self: center;
-        margin: 10px;
     }
     .right-side-bar-down .leader-board{
         margin-right: 0;
+        width: 90%;
+        align-self: center;
     }
     .user-details img{
         width: 30px;
