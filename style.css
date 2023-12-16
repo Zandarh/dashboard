@@ -305,12 +305,12 @@ hr{
         
     }
     .mobile-header img{
-        width: 40px;
+        width: 30px;
         cursor: pointer;
     }
     div.mobile-header .dp{
         border-radius: 50%;
-        width: 30px;
+        width: 20px;
     }
     
     .profile{
