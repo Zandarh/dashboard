@@ -329,7 +329,13 @@ hr{
     .profile .profile-details p,
     .profile .profile-details h2{
         color: var(--card-bg);
-        text-align: center;
+    }
+    .profile-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
 
     .main-content{
